@@ -11,7 +11,7 @@
   },
   {
     "path": "/login",
-    "method": "abc",
+    "method": "get",
     "action": "auth.adminLogin",
     "public": true,
     "globalMiddlewares": [],
@@ -33,7 +33,7 @@
     "path": "/edit",
     "method": "post",
     "action": "auth.adminView",
-    "public": 23,
+    "public": false,
     "globalMiddlewares": [],
     "middlewares": [],
     "pathFromRoot": false,
@@ -42,7 +42,7 @@
   {
     "path": "/delete",
     "method": "delete",
-    "action": 3456,
+    "action": "auth.adminDelete",
     "public": true,
     "globalMiddlewares": [],
     "middlewares": [],

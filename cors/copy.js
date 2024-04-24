@@ -1,9 +1,10 @@
 const fs = require('fs');
 const express = require('express');
 const path = require('path');
-const signup = require('../api/folder1/controllers');
+const {home, signup, login} = require('../api/auth/controllers/pageControllers');
+const middlewares =  require('../api/auth/middleware/authMiddleware')
 
-const filePath = '../api/folder1/routes.json';
+const filePath = '../api/auth/routes.json';
 const methodNames = ['get', 'post', 'put', 'delete'];
 
 const colors = {
@@ -73,7 +74,9 @@ fs.readFile(filePath, 'utf8', (err, data) => {
             console.warn(`\n${colors.yellow}Server will not start due to warnings.${colors.reset}`);
         } else {
             const PORT = 3000;
-            app.get ("/signup", function (req, res){signup()})
+            app.get ("/", middlewares, function (req, res){home(req,res)})
+            app.get ("/signup", middlewares, function (req, res){signup(req,res)})
+            app.get ("/login", middlewares, function (req, res){login(req,res)})
             app.listen(PORT, () => {
                 console.log(`Server is running on port ${PORT}`);
             });
