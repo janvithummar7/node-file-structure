@@ -1,0 +1,52 @@
+[
+  {
+    "path": "/signup",
+    "method": "post",
+    "action": "auth.adminSignup",
+    "public": true,
+    "globalMiddlewares": [],
+    "middlewares": [],
+    "pathFromRoot": false,
+    "enabled": true
+  },
+  {
+    "path": "/login",
+    "method": "abc",
+    "action": "auth.adminLogin",
+    "public": true,
+    "globalMiddlewares": [],
+    "middlewares": [],
+    "pathFromRoot": false,
+    "enabled": true
+  },
+  {
+    "path": "/view",
+    "method": "post",
+    "action": "auth.adminView",
+    "public": true,
+    "globalMiddlewares": [],
+    "middlewares": [],
+    "pathFromRoot": false,
+    "enabled": true
+  },
+  {
+    "path": "/edit",
+    "method": "post",
+    "action": "auth.adminView",
+    "public": 23,
+    "globalMiddlewares": [],
+    "middlewares": [],
+    "pathFromRoot": false,
+    "enabled": false
+  },
+  {
+    "path": "/delete",
+    "method": "delete",
+    "action": 3456,
+    "public": true,
+    "globalMiddlewares": [],
+    "middlewares": [],
+    "pathFromRoot": false,
+    "enabled": true
+  }
+]
