@@ -5,6 +5,7 @@ const API_URL = 'http://localhost:5000/api/routes';
 const methodNames = ['get', 'post', 'put', 'delete', 'patch', 'options', 'head', 'connect', 'trace'];
 
 const App = () => {
+  console.log("Heyy")
   const [routes, setRoutes] = useState([]);
   const [emptyField, setEmptyField] = useState([]);
   const [invalidMethod, setInvalidMethod] = useState([]);
